@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">LetsGetDrunk1.2</string>
+    <string name="title_activity_card_list">CardList</string>
+    <string-array name="titles">
+        <item>2 röd</item>
+        <item>3 röd</item>
+        <item>4 röd</item>
+        <item>5 röd</item>
+        <item>6 röd</item>
+        <item>7 röd</item>
+        <item>8 röd</item>
+        <item>9 röd</item>
+        <item>10 röd</item>
+        <item>Knäckt</item>
+        <item>Dam</item>
+        <item>Kung</item>
+        <item>A</item>
+    </string-array>
+    <string-array name="description">
+        <item>Spelare får dricka två klunkar</item>
+        <item>Spelare får dricka tre klunkar</item>
+        <item>Spelare får dricka fyra klunkar</item>
+        <item>Spelare får dricka fem klunkar</item>
+        <item>Spelare får dricka sex klunkar</item>
+        <item>Burr/Räkneleken</item>
+        <item>Tummleken</item>
+        <item>Tema</item>
+        <item>Regel</item>
+        <item>Toapaus/Rökpaus</item>
+        <item>Alla kvinnor runt bordet måste dricka en klunk.</item>
+        <item>Alla män runt bordet måste dricka en klunk.</item>
+        <item>Vattenfall</item>
+    </string-array>
+</resources>
