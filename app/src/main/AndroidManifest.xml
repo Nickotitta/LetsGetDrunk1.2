@@ -19,7 +19,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".gamesWithTalks" />
         <activity android:name=".gamesWithCards" />
-        <activity android:name=".cardLists" />
         <activity android:name=".RingOfFire" />
         <activity android:name=".NeverTheGame"></activity>
     </application>
