@@ -23,6 +23,8 @@
         <activity android:name=".NeverTheGame" />
         <activity android:name=".IveNever" >
         </activity>
+        <activity android:name=".CreateAList" >
+        </activity>
     </application>
 
 </manifest>
