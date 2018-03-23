@@ -26,7 +26,7 @@ public class NeverTheGame extends AppCompatActivity {
                 "Jag har aldrig bett om en lönehörhöjning.",
                 "Jag har aldrig argumenterat med någon anonym person på internet.",
                 "Jag har aldrig försökt ljuga för någon och det gick åt helvete.",
-                "jag har aldrig trott på gud eller nåt liknade."};
+                "Jag har aldrig trott på gud eller nåt liknade."};
 
         pushMe.setOnClickListener(new View.OnClickListener() {
             @Override

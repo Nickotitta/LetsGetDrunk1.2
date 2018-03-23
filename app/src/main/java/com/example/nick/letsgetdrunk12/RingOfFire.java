@@ -71,7 +71,6 @@ public class RingOfFire extends AppCompatActivity {
 
     };
 
-    //Skapa en text här för varje lista här!!!
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

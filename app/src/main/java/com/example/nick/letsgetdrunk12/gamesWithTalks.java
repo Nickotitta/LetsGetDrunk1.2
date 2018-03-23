@@ -14,12 +14,12 @@ public class gamesWithTalks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games_with_talks);
 
-        // Create a I´ve never fuction here
+
         iveNever = (ImageButton)findViewById(R.id.iveNeverButton);
         iveNever.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent go = new Intent(gamesWithTalks.this, NeverTheGame.class);
+                Intent go = new Intent(gamesWithTalks.this, IveNever.class);
                 startActivity(go);
             }
 
