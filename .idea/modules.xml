@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LetsGetDrunk1.2.iml" filepath="$PROJECT_DIR$/LetsGetDrunk1.2.iml" />
-      <module fileurl="file://C:\Users\Nick\Documents\Applikationer\LetsGetDrunk1.2\LetsGetDrunk1.2.iml" filepath="C:\Users\Nick\Documents\Applikationer\LetsGetDrunk1.2\LetsGetDrunk1.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Nick\Documents\Applikationer\LetsGetDrunk1.2\app\app.iml" filepath="C:\Users\Nick\Documents\Applikationer\LetsGetDrunk1.2\app\app.iml" />
     </modules>
   </component>
 </project>
