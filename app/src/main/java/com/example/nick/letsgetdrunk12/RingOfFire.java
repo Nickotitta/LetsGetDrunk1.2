@@ -1,10 +1,12 @@
 package com.example.nick.letsgetdrunk12;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 public class RingOfFire extends AppCompatActivity {
 
     ListView ringOfF;
+    Button howToPlay;
 
     int[] images = {R.drawable.ahearts,
             R.drawable.twohearts,
@@ -82,6 +85,16 @@ public class RingOfFire extends AppCompatActivity {
 
         CustomAdaptor customAdaptor = new CustomAdaptor();
         ringOfF.setAdapter(customAdaptor);
+
+        howToPlay = (Button) findViewById(R.id.ringOfFireHowBtn);
+        howToPlay.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent go = new Intent(RingOfFire.this, RingOfFireWeb.class);
+                startActivity(go);
+
+            }
+        });
 
 
 
