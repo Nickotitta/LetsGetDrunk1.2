@@ -16,7 +16,7 @@ public class WebViewJavaScriptInterface {
 
     @JavascriptInterface
     public void goToSecondActivity(){
-        context.goToSecondActivity();
+        //context.goToSecondActivity();
     }
 
 }
