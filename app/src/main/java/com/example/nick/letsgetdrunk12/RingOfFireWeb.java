@@ -6,12 +6,15 @@ import android.webkit.WebView;
 
 public class RingOfFireWeb extends AppCompatActivity {
 
-    private WebViewJavaScriptInterface webViewJavaScriptInterface;
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ring_of_fire_web);
+        String myUrl="file:///android_asset/Ring/indexRing.html";
+        WebView view =(WebView) this.findViewById(R.id.ringOfFireWebView);
+        view.getSettings().setJavaScriptEnabled(true);
+        view.loadUrl(myUrl);
     }
 }
