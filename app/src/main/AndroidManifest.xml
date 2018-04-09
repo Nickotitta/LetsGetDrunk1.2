@@ -21,9 +21,10 @@
         <activity android:name=".gamesWithCards" />
         <activity android:name=".RingOfFire" />
         <activity android:name=".NeverTheGame" />
-        <activity android:name=".IveNever"></activity>
-        <activity android:name=".CreateAList"></activity>
-        <activity android:name=".RingOfFireWeb"></activity>
+        <activity android:name=".IveNever" />
+        <activity android:name=".CreateAList" />
+        <activity android:name=".RingOfFireWeb" />
+        <activity android:name=".NeverWeb"></activity>
     </application>
 
 </manifest>

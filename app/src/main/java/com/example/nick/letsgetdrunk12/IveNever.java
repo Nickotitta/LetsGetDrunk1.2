@@ -13,6 +13,7 @@ public class IveNever extends AppCompatActivity {
 
     ListView listView;
     private Button createAList;
+    private Button howTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,15 @@ public class IveNever extends AppCompatActivity {
 
         ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(IveNever.this, android.R.layout.simple_list_item_1,
         getResources().getStringArray(R.array.talkLists));
+
+        howTo = (Button)findViewById(R.id.iveNeverHowBtn);
+        howTo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent how = new Intent( IveNever.this, NeverWeb.class);
+                startActivity(how);
+            }
+        });
 
         createAList = (Button)findViewById(R.id.createNewListBtn);
         createAList.setOnClickListener(new View.OnClickListener() {
