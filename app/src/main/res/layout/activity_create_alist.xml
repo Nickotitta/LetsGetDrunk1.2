@@ -21,6 +21,7 @@
 
     <EditText
         android:id="@+id/editTitle"
+        android:hint="Write your title here..."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -31,6 +32,7 @@
         android:inputType="textPersonName" />
     <EditText
         android:id="@+id/editList"
+        android:hint="Write your lines here..."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

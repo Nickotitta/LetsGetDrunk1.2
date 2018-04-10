@@ -1,5 +1,6 @@
 package com.example.nick.letsgetdrunk12;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,8 +16,10 @@ import java.util.ArrayList;
 
 public class CreateAList extends AppCompatActivity {
 
-    EditText editText;
+    EditText editTitle;
+    EditText editLine;
     Button addButton;
+    Button submbitButton;
     ListView listView;
     ArrayList<String> listItems;
     ArrayAdapter<String> adapter;
@@ -25,37 +28,52 @@ public class CreateAList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_alist);
-        editText = (EditText) findViewById(R.id.editTitle);
+        editTitle = (EditText) findViewById(R.id.editTitle);
+        editLine = (EditText)findViewById(R.id.editList);
         addButton = (Button) findViewById(R.id.addBtn);
+        submbitButton = (Button) findViewById(R.id.submitBtn);
         listView = (ListView)findViewById(R.id.listVIew);
-
         listItems = new ArrayList<String>();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
+
+
+
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editText.length() == 0 ){
-                    addButton.setEnabled(false);
-                    addButton.setEnabled(true);
+                if(editTitle.length() == 0 ) {
+                   /* addButton.setEnabled(false);
+                    addButton.setEnabled(true);*/
+                    editTitle.setEnabled(false);
+                    editTitle.setEnabled(true);
                     Toast.makeText(CreateAList.this, "You didn´t write anything!", Toast.LENGTH_LONG).show();
-
 
                 }else {
                     addButton.setEnabled(true);
-                    listItems.add(editText.getText().toString());
+                    listItems.add(editTitle.getText().toString());
+                    listItems.add(editLine.getText().toString());
                     adapter.notifyDataSetChanged();
+                    editTitle.setText("");
+                    editTitle.setEnabled(false);
+                    editLine.setText("");
                 }
+
             }
         });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        submbitButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> a, View v, int position,
-                                    long id) {
-                Toast.makeText(CreateAList.this, "Clicked", Toast.LENGTH_LONG)
+            public void onClick(View v) {
+                Intent go1 = new Intent(CreateAList.this, IveNever.class);
+                startActivity(go1);
+                Toast.makeText(CreateAList.this, "The list is added", Toast.LENGTH_LONG)
                         .show();
             }
         });
+
+
     }
 }
 
