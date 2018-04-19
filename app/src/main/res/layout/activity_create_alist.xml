@@ -20,26 +20,14 @@
           />
 
     <EditText
-        android:id="@+id/editTitle"
-        android:hint="Write your title here..."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:inputType="textPersonName" />
-    <EditText
         android:id="@+id/editList"
-        android:hint="Write your lines here..."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="111dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="87dp"
         android:ems="10"
+        android:hint="Write your lines here..."
         android:inputType="textPersonName" />
 
     <Button
@@ -48,8 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="215dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="151dp"
         android:text="Add to list" />
 
     <Button

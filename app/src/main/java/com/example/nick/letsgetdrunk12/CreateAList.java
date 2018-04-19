@@ -28,11 +28,10 @@ public class CreateAList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_alist);
-        editTitle = (EditText) findViewById(R.id.editTitle);
         editLine = (EditText)findViewById(R.id.editList);
         addButton = (Button) findViewById(R.id.addBtn);
         submbitButton = (Button) findViewById(R.id.submitBtn);
-        listView = (ListView)findViewById(R.id.listVIew);
+        listView = (ListView)findViewById(R.id.lstTask);
         listItems = new ArrayList<String>();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
@@ -43,20 +42,17 @@ public class CreateAList extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editTitle.length() == 0 ) {
+                if(editLine.length() == 0 ) {
                    /* addButton.setEnabled(false);
                     addButton.setEnabled(true);*/
-                    editTitle.setEnabled(false);
-                    editTitle.setEnabled(true);
+                    editLine.setEnabled(false);
+                    editLine.setEnabled(true);
                     Toast.makeText(CreateAList.this, "You didn´t write anything!", Toast.LENGTH_LONG).show();
 
                 }else {
                     addButton.setEnabled(true);
-                    listItems.add(editTitle.getText().toString());
                     listItems.add(editLine.getText().toString());
                     adapter.notifyDataSetChanged();
-                    editTitle.setText("");
-                    editTitle.setEnabled(false);
                     editLine.setText("");
                 }
 
