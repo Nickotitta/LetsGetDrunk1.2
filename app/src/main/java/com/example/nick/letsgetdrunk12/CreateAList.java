@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
 public class CreateAList extends AppCompatActivity {
 
-    EditText editTitle;
     EditText editLine;
     Button addButton;
     Button submbitButton;
