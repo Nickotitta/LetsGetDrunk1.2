@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         gamesWithCardsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent go = new Intent(MainActivity.this, RingOfFire.gamesWithCards.class);
+                Intent go = new Intent(MainActivity.this, gamesWithCards.class);
                 startActivity(go);
             }
 
