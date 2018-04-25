@@ -1,4 +1,4 @@
-package com.example.nick.letsgetdrunk12;
+package com.example.nick.letsgetdrunk12.DB;
 
 
 import android.content.ContentValues;

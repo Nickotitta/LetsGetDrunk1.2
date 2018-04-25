@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.nick.letsgetdrunk12.R;
+import com.example.nick.letsgetdrunk12.RingOfFire;
+
 public class gamesWithCards extends AppCompatActivity {
 
     private ImageButton ringOfFire;

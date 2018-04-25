@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.nick.letsgetdrunk12.DB.DbHelper;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private Button login, register;
     private EditText etEmail, etPass;

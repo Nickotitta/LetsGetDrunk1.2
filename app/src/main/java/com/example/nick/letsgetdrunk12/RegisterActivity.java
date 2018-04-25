@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nick.letsgetdrunk12.DB.DbHelper;
+
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
     private Button reg;
     private TextView tvLogin;
