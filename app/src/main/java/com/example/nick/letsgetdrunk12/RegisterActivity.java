@@ -14,7 +14,7 @@ import com.example.nick.letsgetdrunk12.DB.DbHelper;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
     private Button reg;
     private TextView tvLogin;
-    private EditText etEmail, etPass;
+    private EditText etEmail, etPass, etRepPass;
     private DbHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         tvLogin = (TextView)findViewById(R.id.tvLogin);
         etEmail = (EditText)findViewById(R.id.etEmail);
         etPass = (EditText)findViewById(R.id.etPass);
+        etRepPass = (EditText)findViewById(R.id.etRepeatPass);
         reg.setOnClickListener(this);
         tvLogin.setOnClickListener(this);
     }
@@ -52,6 +53,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             displayToast("Username/password field empty");
         }else{
             db.addUser(email,pass);
+            displayToast("User registered");
+            finish();
+        }
+        if(!etPass.equals(etRepPass)){
+            displayToast("Make sure you wrote you password correctly");
+        }else{
             displayToast("User registered");
             finish();
         }

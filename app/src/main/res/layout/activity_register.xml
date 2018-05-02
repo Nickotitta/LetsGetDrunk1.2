@@ -43,26 +43,39 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         />
+    <EditText
+        android:id="@+id/etRepeatPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Repeat the password"
+        android:textColorHint="@color/white"
+        android:singleLine="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
 
 
     <Button
         android:id="@+id/btnReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
         android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:onClick="register"/>
+        android:layout_marginRight="10dp"
+        android:onClick="register"
+        android:text="Register" />
 
     <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="center_horizontal"
         android:text="Back to login"
-        android:id="@+id/tvLogin"
-        android:textColor="@color/white"
-        android:layout_gravity="center_horizontal" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
