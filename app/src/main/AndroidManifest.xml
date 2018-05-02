@@ -18,7 +18,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".gamesWithTalks" />
-        <activity android:name=".RingOfFire.gamesWithCards" />
+        <activity android:name=".gamesWithCards" />
         <activity android:name=".RingOfFire" />
         <activity android:name=".NeverTheGame" />
         <activity android:name=".IveNever" />

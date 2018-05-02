@@ -17,26 +17,16 @@
         android:layout_marginBottom="64dp"
         />
 
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/neverButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
+    <TextSwitcher
         android:id="@+id/neverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="152dp"
-        android:text="Klicka på go för att börja"
-        android:textSize="28dp"
+        android:layout_marginTop="10dp"
         android:textStyle="bold"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
         />
 
 </RelativeLayout>

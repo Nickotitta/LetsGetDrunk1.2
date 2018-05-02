@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class IveNever extends AppCompatActivity {
 
     ListView lstTask;
-    private Button createAList;
+    private Button playTheGame;
     private Button howTo;
     ArrayAdapter<String> mAdapter;
     DbHelperList dbHelper;
@@ -34,11 +34,8 @@ public class IveNever extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ive_never);
-
         dbHelper = new DbHelperList(this);
-
         lstTask = (ListView)findViewById(R.id.lstTask);
-
         loadTaskList();
         howTo = (Button) findViewById(R.id.iveNeverHowBtn);
         howTo.setOnClickListener(new View.OnClickListener() {
@@ -49,9 +46,18 @@ public class IveNever extends AppCompatActivity {
 
             }
         });
+
+        playTheGame = (Button) findViewById(R.id.playGameBtn);
+        playTheGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent go2 = new Intent(IveNever.this, NeverTheGame.class);
+                startActivity(go2);
+            }
+        });
     }
 
-    private void loadTaskList() {
+    public void loadTaskList() {
         ArrayList<String> taskList = dbHelper.getTaskList();
         if(mAdapter==null){
             mAdapter = new ArrayAdapter<String>(this,R.layout.createlinerow,R.id.task_title,taskList);
@@ -82,8 +88,8 @@ public class IveNever extends AppCompatActivity {
             case R.id.action_add_task:
                 final EditText taskEditText = new EditText(this);
                 AlertDialog dialog = new AlertDialog.Builder(this)
-                        .setTitle("Add New Task")
-                        .setMessage("What do you want to do next?")
+                        .setTitle("Add A New Line ")
+                        .setMessage("I´ve never.....")
                         .setView(taskEditText)
                         .setPositiveButton("Add", new DialogInterface.OnClickListener() {
                             @Override

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nick.letsgetdrunk12.IveNever">
+
     <Button
         android:id="@+id/iveNeverHowBtn"
         android:layout_width="wrap_content"
@@ -13,18 +14,20 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/createNewListBtn"
-        android:layout_toStartOf="@+id/createNewListBtn"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/playGameBtn"
+        android:layout_toStartOf="@+id/playGameBtn"
         android:text="How to play?" />
 
     <Button
-        android:id="@+id/createNewListBtn"
-        android:layout_width="wrap_content"
+        android:id="@+id/playGameBtn"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="Create new list" />
+        android:text="Play the game" />
 
 
 
@@ -34,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/createNewListBtn">
+        android:layout_below="@+id/playGameBtn">
 
     </ListView>
 
