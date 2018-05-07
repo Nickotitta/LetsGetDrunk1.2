@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ public class RingOfFire extends AppCompatActivity {
 
     ListView ringOfF;
     Button howToPlay;
+    private ArrayAdapter<CharSequence> adapter;
 
     int[] images = {R.drawable.ahearts,
             R.drawable.twohearts,
@@ -45,7 +47,7 @@ public class RingOfFire extends AppCompatActivity {
             "Drottning",
             "Kung",
     };
-    String[] Info = {
+  /*  String[] Info = {
              "VATTTENFALL",
 
             "Two is you. Ta en klunk",
@@ -73,7 +75,7 @@ public class RingOfFire extends AppCompatActivity {
             "Häll lite av din drink i glaset som står omringad av korten. Personen som får upp det sista kungen får dricka upp hela skiten.",
 
     };
-
+*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +85,10 @@ public class RingOfFire extends AppCompatActivity {
 
         ringOfF = (ListView) findViewById(R.id.ListViewRoF);
 
-        CustomAdaptor customAdaptor = new CustomAdaptor();
-        ringOfF.setAdapter(customAdaptor);
+       // CustomAdaptor customAdaptor = new CustomAdaptor();
+       // ringOfF.setAdapter(customAdaptor);
+        adapter = ArrayAdapter.createFromResource(this, R.array.whichCards, android.R.layout.simple_list_item_1);
+        ringOfF.setAdapter(adapter);
 
         howToPlay = (Button) findViewById(R.id.ringOfFireHowBtn);
         howToPlay.setOnClickListener(new View.OnClickListener(){
@@ -125,7 +129,7 @@ public class RingOfFire extends AppCompatActivity {
             TextView mTextView = (TextView) view.findViewById(R.id.textView);
             TextView mTextView2 = (TextView) view.findViewById(R.id.textView2);
 
-            mTextView2.setText(Info[position]);
+           // mTextView2.setText([position]);
             mImageView.setImageResource(images[position]);
             mTextView.setText(Names[position]);
             return view;

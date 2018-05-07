@@ -43,7 +43,6 @@ public class IveNever extends AppCompatActivity {
             public void onClick(View v) {
                 Intent go1 = new Intent(IveNever.this, NeverWeb.class);
                 startActivity(go1);
-
             }
         });
 
@@ -73,7 +72,6 @@ public class IveNever extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.add,menu);
-
         //Change menu icon color
         Drawable icon = menu.getItem(0).getIcon();
         icon.mutate();

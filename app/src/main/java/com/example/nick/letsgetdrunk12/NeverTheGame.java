@@ -19,57 +19,53 @@ import java.util.ArrayList;
 
 public class NeverTheGame extends AppCompatActivity {
 
-    public TextSwitcher textSwitcher;
-    private  int stringIndex =0;
-    private TextView textView;
-    ArrayAdapter<String> mAdapter;
-    DbHelperList dbHelper;
-    private String[] neverTasks = {
-            "Jag har aldrig kollat på anime.",
-            "Jag har aldrig stalkat någon på facebook.",
-            "Jag har aldrig svimmat.",
-            "Jag har aldrig kollat på Disney Channel.",
-            "Jag har aldrig varit med på en fest och tänkt för mig själv'Jag är omringad av idioter'.",
-            "Jag har aldrig bett om en lönehörhöjning.",
-            "Jag har aldrig argumenterat med någon anonym person på internet.",
-            "Jag har aldrig försökt ljuga för någon och det gick åt helvete.",
-            "Jag har aldrig trott på gud eller nåt liknade."};
 
+    int oldValue;
+    ArrayAdapter<String> mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_never_the_game);
-        textSwitcher = (TextSwitcher) findViewById(R.id.neverText);
-        Button pushMe = (Button) findViewById(R.id.neverButton);
+        changeTextOnce();
+         changeTextViewValue();
 
+    }
+    private void changeTextViewValue() {
+        final String[] neverTasks = {
+              /*  "Jag har aldrig kollat på anime.",
+                "Jag har aldrig stalkat någon på facebook.",
+                "Jag har aldrig svimmat.",
+                "Jag har aldrig kollat på Disney Channel.",
+                "Jag har aldrig varit med på en fest och tänkt för mig själv'Jag är omringad av idioter'.",
+                "Jag har aldrig bett om en lönehörhöjning.",
+                "Jag har aldrig argumenterat med någon anonym person på internet.",
+                "Jag har aldrig försökt ljuga för någon och det gick åt helvete.",
+                "Jag har aldrig trott på gud eller nåt liknade."*/};
+        final TextView changeText = (TextView) findViewById(R.id.neverText);
+        Button changeTextButton = (Button) findViewById(R.id.neverButton);
+        changeText.startAnimation(AnimationUtils.loadAnimation(NeverTheGame.this, android.R.anim.slide_in_left));
 
-        pushMe.setOnClickListener(new View.OnClickListener(){
+        changeTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(stringIndex == neverTasks.length-1){
-                    stringIndex = 0;
-                    textSwitcher.setText(neverTasks[stringIndex]);
-                }else {
-                    textSwitcher.setText(neverTasks[++stringIndex]);
+                int random = (int) (Math.random() * neverTasks.length);
+                if(random == oldValue){
+                    random = (int) (Math.random() * neverTasks.length);
                 }
+                changeText.setText(neverTasks[random]);
+                oldValue = random;
             }
         });
-        textSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
+    };
+    private void changeTextOnce(){
+        final TextView changeText = (TextView) findViewById(R.id.neverText);
+        Button changeTextButton = (Button)findViewById(R.id.neverButton);
+        changeTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public View makeView() {
-                textView = new TextView(NeverTheGame.this);
-                textView.setTextColor(Color.BLACK);
-                textView.setTextSize(40);
-                textView.setGravity(Gravity.CENTER_HORIZONTAL);
-                return textView;
+            public void onClick(View v) {
+                changeText.setText("Go hard!");
             }
         });
-        textSwitcher.setText(neverTasks[stringIndex]);
     }
-
 }
-
-
-
-

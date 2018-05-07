@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Drunk</string>
+    <string name="welcome">Välkommen</string>
+    <string name="password">Lösenord</string>
+    <string name="login">LOGGA IN</string>
+    <string name="register">REGISTRERA</string>
+    <string name="logout">LOGGA UT</string>
+    <string name="backToLogin">Tillbaka</string>
+    <string name="repeatThePass">Upprepa lösenord</string>
+    <string name="howToPlay">Hur spelar man?</string>
+
+    <string-array name="whichCards">
+        <item> VATTENFALL</item>
+        <item> Two is you. Ta en klunk</item>
+        <item> Three is me. Ta du själv en klunk</item>
+        <item> Four is whore. Alla tjejer tar en klunk</item>
+        <item> Thumbmaster. Du avgör när det är dags att köra</item>
+        <item> Six is dicks. Alla killar tar en klunk</item>
+        <item> Seven is heaven. Funkar precis som högerregeln fast med ett finger upp i luften</item>
+        <item> Eight is mate. Välj en parnter och varje gång du dricker ska den partnern också dricka med dig</item>
+        <item> Nine is rhyme. Välj ett ord och låt nästa person hitta ett rim till det. Den som inte kommer på ett ord som rimmar får ta en klunk.</item>
+        <item>Väl ett kategori så som bilar eller sminkmärken till exempel och låt varje person säga något till det kategoriet. Den som inte kommer på mer tar en klunk.</item>
+        <item> Hitta på en regel som gruppen måste följa ananrs blir det en straffklunk.</item>
+        <item> Ställ en fråga till hela gruppen eller till en individ. Ifall gruppen eller individen svarar fel blir den en straffklunk. Annars får personen som ställde frågan ta en straffklunk</item>
+        <item>Häll lite av din drink i glaset som står omringad av korten. Personen som får upp det sista kungen får dricka upp hela skiten.</item>
+    </string-array>
+</resources>

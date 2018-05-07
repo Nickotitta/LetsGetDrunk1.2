@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ public class DbHelperList extends SQLiteOpenHelper {
     private static final int DB_VER = 1;
     public static final String DB_TABLE="Task";
     public static final String DB_COLUMN = "TaskName";
+    String[] neverTasks;
 
     public DbHelperList(Context context) {
         super(context, DB_NAME, null, DB_VER);
@@ -23,14 +25,31 @@ public class DbHelperList extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String query = String.format("CREATE TABLE %s (ID INTEGER PRIMARY KEY AUTOINCREMENT,%s TEXT NOT NULL);",DB_TABLE,DB_COLUMN);
         db.execSQL(query);
-
+        insertAll(db);
     }
+
+    private void insertAll(SQLiteDatabase db) {
+        ContentValues values = new ContentValues();
+
+        for (String neverTask : neverTasks) {
+            values.put(DB_COLUMN, neverTask);
+            long rowId = db.insert(DB_TABLE, null, values);
+            if (rowId != -1) {
+                Log.i("insertAll", "Inserted: " + neverTask);
+            } else {
+                Log.w("insertAll", "failure: " + neverTask);
+            }
+            // values.clear();
+        }
+    }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String query = String.format("DELETE TABLE IF EXISTS %s",DB_TABLE);
         db.execSQL(query);
         onCreate(db);
+        insertAll(db);
 
     }
 
