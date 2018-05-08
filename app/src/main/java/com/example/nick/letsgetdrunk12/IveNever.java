@@ -31,9 +31,18 @@ public class IveNever extends AppCompatActivity {
 
 
     @Override
+    public String[] fileList() {
+        return super.fileList();
+    }
+
+    public String[] neverTasks ;
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ive_never);
+
         dbHelper = new DbHelperList(this);
         lstTask = (ListView)findViewById(R.id.lstTask);
         loadTaskList();

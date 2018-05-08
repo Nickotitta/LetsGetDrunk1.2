@@ -30,7 +30,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
-        android:text="I´ve never"
+        android:text="@string/iveNeverText"
         android:textSize="25sp"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="16dp" />

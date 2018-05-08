@@ -18,7 +18,7 @@
         android:layout_marginRight="6dp"
         android:layout_toLeftOf="@+id/playGameBtn"
         android:layout_toStartOf="@+id/playGameBtn"
-        android:text="How to play?" />
+        android:text="@string/howToPlay" />
 
     <Button
         android:id="@+id/playGameBtn"
@@ -27,7 +27,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="Play the game" />
+        android:text="@string/playButton" />
 
 
 

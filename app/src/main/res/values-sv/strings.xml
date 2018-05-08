@@ -10,6 +10,11 @@
     <string name="backToLogin">Tillbaka</string>
     <string name="repeatThePass">Upprepa lösenord</string>
     <string name="howToPlay">Hur spelar man?</string>
+    <string name="NextText">Klicka på nästa</string>
+    <string name="NextButton">Nästa</string>
+    <string name="iveNeverText">Jag har aldrig</string>
+    <string name="playButton">SPELA SPELET</string>
+    <string name="deleteButton">RADERA</string>
 
     <string-array name="whichCards">
         <item> VATTENFALL</item>

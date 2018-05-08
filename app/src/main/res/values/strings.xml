@@ -15,6 +15,12 @@
     <string name="backToLogin">back to login</string>
     <string name="repeatThePass">Repeat the password</string>
     <string name="howToPlay">How to play ?</string>
+    <string name="NextText">Click on Next</string>
+    <string name="NextButton">Next</string>
+    <string name="iveNeverText">I´ve Never</string>
+    <string name="playButton">PLAY THE GAME</string>
+    <string name="deleteButton">DELETE</string>
+
 
     <integer-array name="cardimages">
         <item>@drawable/ahearts</item>

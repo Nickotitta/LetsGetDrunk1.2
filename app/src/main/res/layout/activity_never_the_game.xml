@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:screenOrientation="landscape"
+    android:layout_centerHorizontal="true"
     tools:context="com.example.nick.letsgetdrunk12.NeverTheGame">
 
 
@@ -13,7 +14,7 @@
         android:id="@+id/neverButton"
         android:layout_width="140dp"
         android:layout_height="88dp"
-        android:text="NEXT"
+        android:text="@string/NextButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
@@ -21,14 +22,24 @@
 
     <TextView
         android:id="@+id/neverText"
+        android:text="@string/NextText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:inAnimation="@android:anim/slide_in_left"
-        android:outAnimation="@android:anim/slide_out_right"
-        android:textSize="40dp"
+        android:layout_marginTop="110dp"
+        android:textSize="35dp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/IveNeverNever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text=""
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
 
 </RelativeLayout>

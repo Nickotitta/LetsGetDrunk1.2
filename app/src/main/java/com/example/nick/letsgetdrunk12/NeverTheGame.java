@@ -1,29 +1,22 @@
 package com.example.nick.letsgetdrunk12;
 
-import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextSwitcher;
 import android.widget.TextView;
-import android.widget.ViewSwitcher;
-
 import com.example.nick.letsgetdrunk12.DB.DbHelperList;
-
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class NeverTheGame extends AppCompatActivity {
 
 
     int oldValue;
-    ArrayAdapter<String> mAdapter;
     DbHelperList dbHelper;
+    private TextView neverTheText;
 
 
     @Override
@@ -36,6 +29,7 @@ public class NeverTheGame extends AppCompatActivity {
 
     }
     private void changeTextViewValue() {
+        neverTheText = (TextView)findViewById(R.id.IveNeverNever);
         ArrayList<String> taskList = dbHelper.getTaskList();
         final String[] neverTasks = taskList.toArray(new String[taskList.size()]);
         final TextView changeText = (TextView) findViewById(R.id.neverText);
@@ -45,6 +39,7 @@ public class NeverTheGame extends AppCompatActivity {
         changeTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                neverTheText.setText("I've Never...");
                 int random = (int) (Math.random() * neverTasks.length);
                 if(random == oldValue){
                     random = (int) (Math.random() * neverTasks.length);

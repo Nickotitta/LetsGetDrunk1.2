@@ -25,7 +25,6 @@ public class DbHelperList extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String query = String.format("CREATE TABLE %s (ID INTEGER PRIMARY KEY AUTOINCREMENT,%s TEXT NOT NULL);",DB_TABLE,DB_COLUMN);
         db.execSQL(query);
-        insertAll(db);
     }
 
     private void insertAll(SQLiteDatabase db) {
