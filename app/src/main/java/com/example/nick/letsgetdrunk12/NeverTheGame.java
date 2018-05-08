@@ -16,15 +16,19 @@ import android.widget.ViewSwitcher;
 import com.example.nick.letsgetdrunk12.DB.DbHelperList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NeverTheGame extends AppCompatActivity {
 
 
     int oldValue;
     ArrayAdapter<String> mAdapter;
+    DbHelperList dbHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        dbHelper = new DbHelperList(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_never_the_game);
         changeTextOnce();
@@ -32,16 +36,8 @@ public class NeverTheGame extends AppCompatActivity {
 
     }
     private void changeTextViewValue() {
-        final String[] neverTasks = {
-              /*  "Jag har aldrig kollat på anime.",
-                "Jag har aldrig stalkat någon på facebook.",
-                "Jag har aldrig svimmat.",
-                "Jag har aldrig kollat på Disney Channel.",
-                "Jag har aldrig varit med på en fest och tänkt för mig själv'Jag är omringad av idioter'.",
-                "Jag har aldrig bett om en lönehörhöjning.",
-                "Jag har aldrig argumenterat med någon anonym person på internet.",
-                "Jag har aldrig försökt ljuga för någon och det gick åt helvete.",
-                "Jag har aldrig trott på gud eller nåt liknade."*/};
+        ArrayList<String> taskList = dbHelper.getTaskList();
+        final String[] neverTasks = taskList.toArray(new String[taskList.size()]);
         final TextView changeText = (TextView) findViewById(R.id.neverText);
         Button changeTextButton = (Button) findViewById(R.id.neverButton);
         changeText.startAnimation(AnimationUtils.loadAnimation(NeverTheGame.this, android.R.anim.slide_in_left));
