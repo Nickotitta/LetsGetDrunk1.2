@@ -4,27 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nick.letsgetdrunk12.RingOfFire.gamesWithCards">
+    tools:context="com.example.nick.letsgetdrunk12.gamesWithCards">
 
     <ImageButton
         android:id="@+id/ringOfFireButton"
-        android:layout_width="86dp"
-        android:layout_height="77dp"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_below="@+id/textView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="59dp"
+        android:radius="35dp"
         app:srcCompat="@mipmap/ic_launcher"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="48dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="50dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="127dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -32,7 +30,7 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="14dp"
         android:text="Ring of Fire"
-        android:textSize="18sp"
+        android:textSize="25sp"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="16dp" />
 </RelativeLayout>

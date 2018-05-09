@@ -1,6 +1,7 @@
 package com.example.nick.letsgetdrunk12;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class RingOfFire extends AppCompatActivity {
     ListView ringOfF;
     Button howToPlay;
     private ArrayAdapter<CharSequence> adapter;
+
 
     int[] images = {R.drawable.ahearts,
             R.drawable.twohearts,
@@ -81,6 +83,9 @@ public class RingOfFire extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ring_of_fire);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         ringOfF = (ListView) findViewById(R.id.ListViewRoF);

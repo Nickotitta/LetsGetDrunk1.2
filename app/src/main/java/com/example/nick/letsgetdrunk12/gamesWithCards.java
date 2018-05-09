@@ -1,6 +1,7 @@
 package com.example.nick.letsgetdrunk12;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ public class gamesWithCards extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games_with_cards);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         ringOfFire = (ImageButton)findViewById(R.id.ringOfFireButton);
         ringOfFire.setOnClickListener(new View.OnClickListener() {
