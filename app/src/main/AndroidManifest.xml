@@ -17,14 +17,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".gamesWithTalks" />
-        <activity android:name=".gamesWithCards" />
+
+        <activity android:name=".gamesWithCards"
+            android:screenOrientation="portrait"/>
+
         <activity android:name=".RingOfFire" />
+
         <activity android:name=".NeverTheGame" />
+
         <activity android:name=".IveNever" />
+
         <activity android:name=".RingOfFireWeb" />
-        <activity android:name=".NeverWeb"></activity>
+
+        <activity android:name=".NeverWeb">
+
+        </activity>
     </application>
 
 </manifest>

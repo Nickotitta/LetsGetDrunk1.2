@@ -1,5 +1,6 @@
 package com.example.nick.letsgetdrunk12;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,8 @@ public class NeverTheGame extends AppCompatActivity {
         setContentView(R.layout.activity_never_the_game);
         changeTextOnce();
          changeTextViewValue();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
     }
     private void changeTextViewValue() {
