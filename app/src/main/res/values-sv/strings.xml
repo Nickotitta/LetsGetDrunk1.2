@@ -16,6 +16,7 @@
     <string name="playButton">SPELA SPELET</string>
     <string name="deleteButton">RADERA</string>
     <string name="NeverOnGame">Jag har aldrig...</string>
+    <string name="Comming">Kommer snart</string>
 
     <string-array name="whichCards">
         <item> A - VATTENFALL</item>

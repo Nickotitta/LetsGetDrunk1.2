@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.nick.letsgetdrunk12.gamesWithCards">
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="97dp"
-        android:layout_height="102dp"
-        android:layout_alignEnd="@+id/imageButton"
-        android:layout_centerVertical="true"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/comming" />
-
     <ImageButton
         android:id="@+id/ringOfFireButton"
         android:layout_width="wrap_content"
@@ -44,17 +33,27 @@
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="16dp" />
 
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="97dp"
+        android:layout_height="102dp"
+        android:layout_alignEnd="@+id/imageButton"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/comming" />
+
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="109dp"
         android:layout_height="97dp"
-        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/textView4"
         android:layout_alignTop="@+id/ringOfFireButton"
-        android:layout_marginEnd="75dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/comming"
-        />
+        app:srcCompat="@drawable/comming" />
 
     <TextView
         android:id="@+id/textView4"
@@ -63,7 +62,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView"
         android:layout_marginEnd="41dp"
-        android:text="Comming Soon "
+        android:text="@string/Comming"
         android:textSize="25sp" />
 
     <ImageButton
@@ -78,13 +77,12 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="171dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="191dp"
-        android:text="Comming Soon "
+        android:layout_marginTop="218dp"
+        android:layout_toStartOf="@+id/textView4"
+        android:text="@string/Comming"
         android:textSize="25sp" />
 
     <TextView
@@ -94,7 +92,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView5"
         android:layout_marginEnd="21dp"
-        android:text="Comming Soon "
+        android:text="@string/Comming"
         android:textSize="25sp" />
 </RelativeLayout>
 

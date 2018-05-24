@@ -21,6 +21,7 @@
     <string name="playButton">PLAY THE GAME</string>
     <string name="deleteButton">DELETE</string>
     <string name="NeverOnGame">I´ve Never...</string>
+    <string name="Comming">Comming soon</string>
 
 
     <integer-array name="cardimages">
